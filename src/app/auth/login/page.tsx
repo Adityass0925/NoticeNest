@@ -16,7 +16,7 @@ export default function LoginPage() {
           Connect with your community, stay updated, and join events!
         </p>
         <button
-          onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/home" })}
+          onClick={() => signIn("google", { callbackUrl: "/home" })}
           className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-400 to-purple-400 text-white font-bold py-3 rounded-xl shadow hover:scale-105 transition-transform duration-200 mb-6"
         >
           <svg width="24" height="24" viewBox="0 0 48 48" className="mr-2">
