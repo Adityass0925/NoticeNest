@@ -469,7 +469,7 @@ const LandingPage: NextPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               className="bg-yellow-400 text-purple-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all hover:scale-105 shadow-lg"
-              onClick={() => signIn("google")}
+              onClick={() => signIn("google", { callbackUrl: "/home" })}
             >
               Get Started Today
             </button>
