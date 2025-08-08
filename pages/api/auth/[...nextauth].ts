@@ -18,10 +18,15 @@ const handler = NextAuth({
     signIn: "/auth/login",
   },
   callbacks: {
-    async redirect({ url, baseUrl }) {
-      return "/home";
-    },
+  async redirect({ url, baseUrl }) {
+    // Redirect to the callbackUrl (url) if it's local, else fallback to /home
+    if (url.startsWith(baseUrl)) {
+      return url;
+    }
+    return baseUrl + "/home";
   },
+},
+
 });
 
 export { handler as GET, handler as POST };
